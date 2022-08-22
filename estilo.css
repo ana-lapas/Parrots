@@ -1,0 +1,97 @@
+body {
+    background-color: #eef9bf;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 65.63px;
+    color: #75b79e;
+}
+.principal {
+    display: inline;
+}
+.escondido {
+    display: none;
+}
+img {
+    height: 100px;
+    width: 100px;
+}
+.titulo {
+    display: flex;
+    flex-direction: row;
+    height: 133px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.baralho {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1120px;
+    margin: 0 auto;
+}
+.carta {
+    margin: 17px 17px 17px 17px;
+    }
+.card {
+    width: 117px;
+    height: 146px;
+    position: relative;
+  }
+
+  .face {
+    width: 100%;
+    height: 100%;
+    background-color: #99cea8;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+ }
+
+  .back-face {
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+  }
+
+  .selecionada .back-face {
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+  }
+
+  .selecionada .front-face {
+    transform-style: preserve-3d;
+    transform: rotateY(-180deg);
+  }
+@media(max-width: 767px) {
+    body, .titulo, .baralho {
+        width: 100%;
+    }
+    h1 {
+        text-align: center;
+    }
+    .titulo {
+        height: fit-content;
+    }
+    .baralho {
+        flex-direction: column;
+    }
+    .principal {
+        display: none;
+    }
+    .secundario {
+        display: inline;
+    }
+}
